@@ -1,0 +1,124 @@
+<?xml version='1.0'?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="Universitate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UniversitatesID"/>
+        <xs:element ref="Universitatesnosaukums"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Macibugadisemestris">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MacibugadasemestraID"/>
+        <xs:element ref="Kurss"/>
+        <xs:element ref="Kurssemestris"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Prieksmets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PrieksmetaID"/>
+        <xs:element ref="Prieksmetanosaukums"/>
+        <xs:element ref="Prieksmetailgums"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="StudentaID" type="xs:string"/>
+
+  <xs:element name="PrieksmetaID" type="xs:string"/>
+
+  <xs:element name="PasniedzejaID" type="xs:string"/>
+
+  <xs:element name="Studentaatzimes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="StudentaID"/>
+        <xs:element ref="PrieksmetaID"/>
+        <xs:element ref="PasniedzejaID"/>
+        <xs:element ref="MacibugadasemestraID"/>
+        <xs:element ref="Atzime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Studentauzvards" type="xs:string"/>
+
+  <xs:element name="Pasniedzejavards" type="xs:string"/>
+
+  <xs:element name="Students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="StudentaID"/>
+        <xs:element ref="Studentavards"/>
+        <xs:element ref="Studentauzvards"/>
+        <xs:element ref="UniversitatesID"/>
+        <xs:element ref="FakultatesID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="FakultatesID" type="xs:string"/>
+
+  <xs:element name="Pasniedzejs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="PasniedzejaID"/>
+        <xs:element ref="Pasniedzejavards"/>
+        <xs:element ref="Pasniedzejauzvards"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Atzime" type="xs:string"/>
+
+  <xs:element name="UniversitatesID" type="xs:string"/>
+
+  <xs:element name="Kurss" type="xs:string"/>
+
+  <xs:element name="Studentavards" type="xs:string"/>
+
+  <xs:element name="Prieksmetailgums" type="xs:string"/>
+
+  <xs:element name="Kurssemestris" type="xs:string"/>
+
+  <xs:element name="Pasniedzejauzvards" type="xs:string"/>
+
+  <xs:element name="Prieksmetanosaukums" type="xs:string"/>
+
+  <xs:element name="mydoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Macibugadisemestris"/>
+        <xs:element ref="Universitate"/>
+        <xs:element ref="Fakultate"/>
+        <xs:element ref="Prieksmets"/>
+        <xs:element ref="Pasniedzejs"/>
+        <xs:element ref="Students"/>
+        <xs:element ref="Studentaatzimes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Universitatesnosaukums" type="xs:string"/>
+
+  <xs:element name="Fakultate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FakultatesID"/>
+        <xs:element ref="Fakultatesnosaukums"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Fakultatesnosaukums" type="xs:string"/>
+
+  <xs:element name="MacibugadasemestraID" type="xs:string"/>
+</xs:schema>
