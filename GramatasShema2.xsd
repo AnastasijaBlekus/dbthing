@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="IAutors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="AutoraID"/>
+        <xs:element ref="Vards"/>
+        <xs:element ref="Uzvards"/>
+        <xs:element ref="Dzimsanasgads"/>
+        <xs:element ref="Mirsanasgads"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Autors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IAutors" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Nosaukums" type="xs:string"/>
+
+  <xs:element name="Izdosanasgads" type="xs:string"/>
+
+  <xs:element name="izdevnieciba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Autors"/>
+        <xs:element ref="Gramata"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Lapususkaits" type="xs:string"/>
+
+  <xs:element name="IGramata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="GramatasID"/>
+        <xs:element ref="Nosaukums"/>
+        <xs:element ref="Lapususkaits"/>
+        <xs:element ref="Izdosanasgads"/>
+        <xs:element ref="AutoraID"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AutoraID" type="xs:string"/>
+
+  <xs:element name="Dzimsanasgads" type="xs:string"/>
+
+  <xs:element name="GramatasID" type="xs:string"/>
+
+  <xs:element name="Gramata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="IGramata" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Uzvards" type="xs:string"/>
+
+  <xs:element name="Mirsanasgads" type="xs:string"/>
+
+  <xs:element name="Vards" type="xs:string"/>
+</xs:schema>
